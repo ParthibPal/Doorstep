@@ -35,7 +35,7 @@ const Router = () => {
         <Route path='/sellerForm' element={<Protected Component={SellerForm} />} />
         <Route path='/admin' element={<Protected Component={Admin} />} />
 
-        <Route path='Doorstep/' element={<LogIn />} />
+        <Route path='/' element={<LogIn />} />
         <Route path='/logup' element={<LogUp />} />
       </Routes>
     </BrowserRouter>
