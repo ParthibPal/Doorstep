@@ -1,0 +1,118 @@
+.admin-container {
+    background-color:#f9e9a7;
+    height: auto;
+    width: 95%;
+    margin-top: 5rem;
+    margin-inline: auto;
+
+}
+
+.admin-heading {
+    /* background-color: aqua; */
+    height: 10vh;
+    width: 95%;
+    margin-inline: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.admin-stats-container {
+    /* background-color: yellowgreen; */
+    height: 15vh;
+    width: 100%;
+    display: flex;
+}
+
+.admin-stats {
+    background-color: white;
+    border: 1px solid black;
+    height: 12vh;
+    width: 20vw;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+}
+
+.admin-stats img {
+    height: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-inline: 1rem;
+
+}
+
+.admin-stats div {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-inline-start: 1rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.admin-filter {
+    /* background-color: blueviolet; */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .5rem;
+    height: 3rem;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+
+}
+
+.admin-services {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    margin-inline: .5rem;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.admin-table {
+    font-family: "Poppins", sans-serif;
+}
+
+.admin-table table {
+    border-collapse: collapse;
+    margin-top: 10px;
+
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid black; /* ✅ Add borders to cells */
+    padding: 0.5rem;         /* ✅ Optional: adds spacing inside cells */
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: antiquewhite;
+}
+
+.admin-table tr {
+    background-color: white;
+}
+
+.admin-action-btn {
+    padding: .5rem 1rem;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-action-icon {
+    color: white;
+}
+
+.admin-action-btn:active {
+    transform: scale(0.9);
+}

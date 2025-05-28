@@ -1,0 +1,68 @@
+.popupcard-container{
+    /* background-color: #f9e9a7; */
+    background-color: #f4f4f4;
+    /* background-image: linear-gradient(to bottom right, #5dade2, #1f618d); */
+    height: 80vh;
+    width:100vh;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    /* color: white; */
+    font-family: "Outfit", sans-serif;
+    /* border: 1px solid black; */
+    
+    
+}
+
+.popupcard-container::-webkit-scrollbar{
+    background: white; 
+    width: .5rem;
+    
+}
+
+.popupcard-container::-webkit-scrollbar-thumb {
+    background: #f1c40f; 
+  }
+  
+
+
+.popupcard-heading{
+    background-color: #f9e9a7;
+    height: 10vh;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding: .5rem 0;
+    /* padding-top: 1rem; */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.popupcard-heading img{
+    /* background-color: red; */
+    /* display: flex; */
+    height: 100%;
+    width: 4.5rem;
+    margin-right: 1rem;
+    margin-left: .5rem;
+    /* align-items: center; */
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+}
+.popupcard-content{
+    /* background-color: blueviolet; */
+    width: 95%;
+    height: auto;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+
+    
+    /* margin-top: 2rem; */
+    
+}
