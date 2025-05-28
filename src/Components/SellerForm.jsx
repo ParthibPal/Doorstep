@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../Components/Component_css/SellerForm.css';
 import axios from 'axios'
 import toast from 'react-hot-toast';
-
+import Register from "../images/register.png";
+import SellerLogin from "../images/sellerLogin.png";
+import PassCreation from "../images/passCreation.png"
 const SellerForm = () => {
     const [mobileNumber, setMobileNumber] = useState("");
     const [email, setEmail] = useState("");
@@ -178,7 +180,7 @@ const SellerForm = () => {
                             <button className="submit-btn" onClick={handleNextStep}>Register & Continue →</button>
                         </div>
                         <div className="info-section">
-                            <img src='/images/register.png' alt='Register Illutrator' />
+                            <img src={Register} alt='Register Illutrator' />
                         </div>
                     </div>
                 )}
@@ -187,7 +189,7 @@ const SellerForm = () => {
             {step === 2 && (
                 <div className="passContainer" style={{ marginTop: "3vh" }}>
                     <div className='password-img'>
-                        <img src='/images/passCreation.png' alt='Password setup' />
+                        <img src={PassCreation} alt='Password setup' />
                     </div>
                     <div className="passwordCreation">
                         <h2>Choose your secret password secretly</h2>
@@ -469,7 +471,7 @@ const SellerForm = () => {
                         </form>
                     </div>
                     <div className='sellerLogInImg'>
-                        <img src='/images/sellerLogin.png' alt='Seller Login'></img>
+                        <img src={SellerLogin} alt='Seller Login'></img>
                     </div>
                 </div>
             )}

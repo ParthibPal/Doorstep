@@ -7,7 +7,7 @@ import SearchLogo from '../Images/search-b.png';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import NavAvatar from "../Images/nav-avatar.png"
 const Navbar = () => {
     const navigate = useNavigate();
     const [openProfile, setOpenProfie] = useState(false);
@@ -132,7 +132,7 @@ const Navbar = () => {
                         />
                         <img src={SearchLogo} alt='search' className='search-icon' />
                     </div>
-                    <img className="nav-avatar" src='/images/nav-avatar.png' onClick={() => setOpenProfie((prev) => !prev)} />
+                    <img className="nav-avatar" src={NavAvatar} onClick={() => setOpenProfie((prev) => !prev)} />
                 </span>
                 {openProfile && <ProfileDropdown />}
             </nav>

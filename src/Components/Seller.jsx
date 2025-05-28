@@ -3,12 +3,24 @@ import React from "react";
 import '../Components/Component_css/Seller.css';
 import { useNavigate } from "react-router-dom";
 
+import taskIcon from '../images/task.png';
+import performanceAnalyticsIcon from '../images/performance-analytics.png';
+import interactionIcon from '../images/interaction.png';
+import supportIcon from '../images/technical-support.png';
+import SellerBg from "../Images/SellerBg.png";
+
+import CreateAccount from '../images/CreateAccount.png';
+import ListItems from '../images/ListItems.jpg';
+import order from '../images/order.jpg';
+import Shippment from '../images/Shippment.jpg';
+import payment from '../images/payment.jpg';
+
 const Seller = () => {
   const features = [
-    { title: "Service Listing Management", icon: "/images/task.png" },
-    { title: "Performance Analytics", icon: "/images/performanceAnalytics.png" },
-    { title: "Various Interaction Tools", icon: "/images/interaction.png" },
-    { title: "24/7 Seller Support", icon: "/images/technical-support.png" }
+    { title: "Service Listing Management", icon: taskIcon },
+    { title: "Performance Analytics", icon: performanceAnalyticsIcon },
+    { title: "Various Interaction Tools", icon: interactionIcon },
+    { title: "24/7 Seller Support", icon: supportIcon },
   ];
   const navigate = useNavigate();
 
@@ -28,7 +40,7 @@ const Seller = () => {
 
         </div>
         <div className="photo">
-          <img src="./images/SellerBg.png" />
+          <img src={SellerBg} alt="Seller Background" />
         </div>
 
 
@@ -61,25 +73,24 @@ const Seller = () => {
             DoorStep is designed for growth.</p>
         <div className="steps">
           <div className="step1">
-            <img src="/images/CreateAccount.png" alt="" />
-            <h3>Create</h3>
+            <img src={CreateAccount} alt="Create Account" />            <h3>Create</h3>
             <p>Register in just 10 mins with valid GST, address, & bank details</p>
           </div>
           <div className="step1">
-            <img src="/images/ListItems.jpg" alt="" />
+            <img src={ListItems} alt="List Items" />
             <h3>List</h3>
             <p>List your products (min 1 no.) that you want to sell on DoorStep.</p>
           </div>
           <div className="step1">
-            <img src="/images/order.jpg" alt="" />
+            <img src={order} alt="Order" />
             <h3>Orders</h3>
             <p>Receive orders from over 45 crore+ DoorStep customers.</p></div>
           <div className="step1">
-            <img src="/images/Shippment.jpg" alt="" />
+            <img src={Shippment} alt="Shippment" />
             <h3>Shipment</h3>
             <p>Doorstep ensures stress free delivery of your products</p></div>
           <div className="step1">
-            <img src="/images/payment.jpg" alt="" />
+            <img src={payment} alt="Payment" />
             <h3>Payment</h3>
             <p>Receive payment 7 days* from the date of dispatch of your order</p></div>
         </div>
