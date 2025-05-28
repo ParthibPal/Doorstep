@@ -47,6 +47,15 @@ import BodymessageNeeds from '../Images/Bodymessage-Needs.jpg';
 import LawncareNeeds from '../Images/Lawncare-Needs.jpg';
 import PersonalStylist from "../Images/PersonalStylist.jpg"
 import LanguageLessons from "../Images/Language Lessons.jpg"
+
+
+import InteriorDesign from '../Images/interior-design.jpg';
+import Cleaning from '../Images/cleaning-services.jpg';
+import MusicLessons from '../Images/music-lessons.jpg';
+import EventPlanning from '../Images/event-planning.jpg';
+import Electrician from '../Images/electrician-services.jpg';
+import WebDevelopment from '../Images/web-development.jpg';
+import PhotoServices from '../Images/photo-services.jpg';
 const HomeCards = (props) => {
   const navigate = useNavigate();
   const [modalId, setModalId] = useState(false);
@@ -97,13 +106,23 @@ const HomeCards = (props) => {
             }}
             pagination={{ clickable: true }}
           >
-            <SwiperSlide><img src="/images/Interior Design.jpg" /></SwiperSlide>
-            <SwiperSlide><img src="/images/Cleaning Services.jpg" /></SwiperSlide>
-            <SwiperSlide><img src="/images/Music Lessons.jpg" /></SwiperSlide>
-            <SwiperSlide><img src="/images/Event Planning.jpg" /></SwiperSlide>
-            <SwiperSlide><img src="/images/Electrician Services.jpg" /></SwiperSlide>
-            <SwiperSlide><img src="/images/Web Development.jpg" /></SwiperSlide>
-            <SwiperSlide><img src="/images/Photo Services.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Interior Design.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Cleaning Services.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Music Lessons.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Event Planning.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Electrician Services.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Web Development.jpg" /></SwiperSlide>
+            <SwiperSlide><img src="images/Photo Services.jpg" /></SwiperSlide>
+
+
+
+            <SwiperSlide><img src={InteriorDesign} alt="Interior Design" /></SwiperSlide>
+            <SwiperSlide><img src={Cleaning} alt="Cleaning Services" /></SwiperSlide>
+            <SwiperSlide><img src={MusicLessons} alt="Music Lessons" /></SwiperSlide>
+            <SwiperSlide><img src={EventPlanning} alt="Event Planning" /></SwiperSlide>
+            <SwiperSlide><img src={Electrician} alt="Electrician Services" /></SwiperSlide>
+            <SwiperSlide><img src={WebDevelopment} alt="Web Development" /></SwiperSlide>
+            <SwiperSlide><img src={PhotoServices} alt="Photo Services" /></SwiperSlide>
           </Swiper>
         </div>
       </div>
@@ -208,7 +227,7 @@ const HomeCards = (props) => {
             <div className="three-images">
               {section.items.map((item, idx) => (
                 <div className="servicesImg" key={idx} onClick={() => toggleModal(item.text)}>
-                  <img src={item.image} alt={item.text}  key={idx} />
+                  <img src={item.image} alt={item.text} key={idx} />
                   <div>{item.text}</div>
                 </div>
               ))}
@@ -260,7 +279,7 @@ const HomeCards = (props) => {
           <div className="modal" style={{ zIndex: 1 }}>
             <div className="overlay" onClick={() => toggleModal(modalId)}></div>
             <div className="modal-content">
-              <button onClick={() => toggleModal(modalId)} className="close-modal-btn" style={{marginLeft:"52rem", marginTop:"3vh", cursor:"pointer"}}>
+              <button onClick={() => toggleModal(modalId)} className="close-modal-btn" style={{ marginLeft: "52rem", marginTop: "3vh", cursor: "pointer" }}>
                 <i className="fa-solid fa-xmark"></i>
               </button>
               <PopupCard category={modalId} fetchedData={fetchedData} />
