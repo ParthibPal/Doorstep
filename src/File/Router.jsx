@@ -19,7 +19,7 @@ import Admin from '../Components/Admin.jsx';
 const Router = () => {
   return (
 
-    <BrowserRouter>
+    <BrowserRouter basename="/Doorstep">
       <Navbar />
       <Routes>
 
