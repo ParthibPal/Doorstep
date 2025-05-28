@@ -15,7 +15,7 @@ const AddCard = () => {
     formData.append("image", image);
 
     // Send form data to backend
-    const response = await fetch("http://localhost:5000/api/cards/addCard", {
+    const response = await fetch("https://doorstep-backend-yesa.onrender.com/api/cards/addCard", {
       method: "POST",
       body: formData,
     });

@@ -17,7 +17,7 @@ const navigate = useNavigate(); // For redirecting after successful signup
   const handleSubmit = (e) => {
       e.preventDefault();
       
-      axios.post('http://localhost:5000/signup', { name, email, password,confirmPassword,phone })
+      axios.post('https://doorstep-backend-yesa.onrender.com/signup', { name, email, password,confirmPassword,phone })
       .then(result => {
           // console.log(result);
           toast.success("You’ve signed up successfully! 🎉", { autoClose: 2000 });

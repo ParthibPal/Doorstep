@@ -29,7 +29,7 @@ const SellerForm = () => {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000/api/sellerTempForm", formData, {
+            const response = await axios.post("https://doorstep-backend-yesa.onrender.com/api/sellerTempForm", formData, {
                 headers: { "Content-Type": "application/json" }
             })
 
@@ -73,7 +73,7 @@ const SellerForm = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/api/sellerTempForm/step2", {
+            const response = await axios.post("https://doorstep-backend-yesa.onrender.com/api/sellerTempForm/step2", {
                 email: sessionStorage.getItem("sellerEmail"),
                 name,
                 password,
@@ -111,7 +111,7 @@ const SellerForm = () => {
         formData.append("serviceCost", serviceCost);
         formData.append("imageSrc", imageSrc);
         try {
-            const response = await axios.post("http://localhost:5000/api/sellerTempForm/step3",
+            const response = await axios.post("https://doorstep-backend-yesa.onrender.com/api/sellerTempForm/step3",
                 formData, { headers: { "Content-Type": "multipart/form-data" } });
             if (response.status === 200) {
                 // alert("✅ Service details added succesfully!");

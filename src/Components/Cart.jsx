@@ -19,7 +19,7 @@ const Cart = () => {
     const fetchCartItems = async () => {
         try {
             const email = localStorage.getItem('loggedInEmail');
-            const response = await axios.get(`http://localhost:5000/api/cart?email=${email}`);
+            const response = await axios.get(`https://doorstep-backend-yesa.onrender.com/api/cart?email=${email}`);
             setCartItems(response.data);
         } catch (error) {
             console.error('Error fetching cart items:', error);
@@ -32,7 +32,7 @@ const Cart = () => {
     // Delete cart item from DB
     const removeCartItem = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/cart/${id}`);
+            await axios.delete(`https://doorstep-backend-yesa.onrender.com/api/cart/${id}`);
             // After deletion, refresh the list
             setCartItems((prevItems) => prevItems.filter(item => item._id !== id));
         } catch (error) {
@@ -92,7 +92,7 @@ const Cart = () => {
 
                             try {
                                 // 1. Save to sales-table
-                                await axios.post('http://localhost:5000/api/sales-table', { sales: salesData });
+                                await axios.post('https://doorstep-backend-yesa.onrender.com/api/sales-table', { sales: salesData });
 
                                 // 2. Remove items from cart table (reuse your function)
                                 for (const item of cartItems) {

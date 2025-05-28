@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const addToCartHandler = async (item) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/cart', {
+            const response = await axios.post('https://doorstep-backend-yesa.onrender.com/api/cart', {
                 name: item.name,
                 img: item.imageSrc,
                 location: item.serviceLocation,
@@ -56,7 +56,7 @@ const Navbar = () => {
     const handleSearchKeyDown = async (e) => {
         if (e.key === 'Enter' && searchTerm.trim()) {
             try {
-                const response = await fetch('http://localhost:5000/api/cards');
+                const response = await fetch('https://doorstep-backend-yesa.onrender.com/api/cards');
                 const data = await response.json();
 
                 const filtered = data.filter((item) =>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
         if (newCategory) {
             try {
-                const response = await fetch(`http://localhost:5000/api/cards/${category}`);
+                const response = await fetch(`https://doorstep-backend-yesa.onrender.com/api/cards/${category}`);
                 if (response.ok) {
                     const data = await response.json();
                     setFetchedData(data);

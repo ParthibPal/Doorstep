@@ -12,7 +12,7 @@ const PopupcardContents = (person) => {
     // Function to add item to the cart and insert into the database
     const addToCartHandler = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/api/cart', {
+            const response = await axios.post('https://doorstep-backend-yesa.onrender.com/api/cart', {
                 name: person.name,
                 img: person.img,
                 location: person.location,
