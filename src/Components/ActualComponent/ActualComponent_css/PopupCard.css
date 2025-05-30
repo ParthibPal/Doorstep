@@ -59,10 +59,11 @@
   /* Responsive adjustments */
   @media (max-width: 700px) {
     .popupcard-container {
-      max-width: 95vw;
-      height: 85vh;
+      max-width: 90vw;
+      height: 81vh;
       padding: 1rem 0.8rem;
       border-radius: 10px;
+      margin-top: 1rem;
     }
   
     .popupcard-heading {
