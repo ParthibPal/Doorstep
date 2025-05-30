@@ -19,8 +19,8 @@ const ProfileDropdown = () => {
     localStorage.removeItem('login');
     toast.success("Logout successful! 👋", { autoClose: 2000 });
     setTimeout(() => {
-      navigate('/signin');
-    }, 1000);
+      navigate('/');
+    }, 2000);
   };
 
   return (

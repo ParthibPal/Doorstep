@@ -158,25 +158,6 @@ const HomeCards = (props) => {
       <hr className='homecards-hr' />
 
       <h1 style={{ marginLeft: "23px", marginTop: "20px" }}>Similar Services</h1>
-      {/* Suggestion Conatiner */}
-      {/* <div className='suggestion-container'>
-        {[
-          { title: 'Cleaning', images: [HouseCleaning, CarpetCleaning, CarCleaning] },
-          { title: 'Repair', images: [ComputerRepair, PlumbingRepair, HandymanRepair] },
-          { title: 'Service', images: [LegalService, MovingService, TutorService] },
-          { title: 'Frequently Used', images: [ElectricalNeeds, BodymessageNeeds, LawncareNeeds] },
-        ].map((section, index) => (
-          <div className='suggestion' key={index}>
-            <div className='suggestion-heading'>{section.title}</div>
-            <div className='three-images'>
-              {section.images.map((img, idx) => (
-                <HomeSuggestionCard key={idx} img={img} desc={img.split('/').pop().replace(/[-_]/g, ' ').split('.')[0]} 
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div> */}
 
       <div className='suggestion-container'>
         {[
@@ -207,7 +188,7 @@ const HomeCards = (props) => {
           {
             title: 'Frequently Used',
             items: [
-              { image: ElectricalNeeds, text: 'Electrician Services' },
+              { image: ElectricalNeeds, text: 'Electrician' },
               { image: BodymessageNeeds, text: 'Message therapy' },
               { image: LawncareNeeds, text: 'Lawncare Services' },
             ],

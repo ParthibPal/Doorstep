@@ -2,23 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #f4f4f4; */
-  /* background-color: #f9e9a7; */
   background-image: linear-gradient(to bottom right, #f4f4f4, #f9e9a7);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: 102%;
+  width: 100%;
   max-width: 300px;
-  height: 39vh;
-  margin: auto;
+  height: auto;
+  margin: 1vh auto;
   overflow: hidden;
-  position: relative; /* Ensures absolute children are positioned correctly */
+  position: relative;
   transition: transform 0.3s ease;
-  margin-top: 1vh;
-  margin-left: 1vh;
-  margin-bottom: 1vh;
-  max-height: 54rem;
-  padding-bottom: 2rem; /* Add this line */
+  padding-bottom: 2rem;
 }
 
 .service-card:hover {
@@ -35,45 +29,42 @@
 }
 
 .try {
-  padding: 25px;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .try h2 {
   font-size: 1.5rem;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .try p {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 20px;
-  padding: 2px;
+  margin-bottom: 1rem;
+  padding: 0.2rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Adjust number of lines shown */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-
 /* App button */
 .button-85 {
-  padding: 0.6em 2em;
+  padding: 0.6em 1.5em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
+  color: #fff;
   background: #111;
   cursor: pointer;
   position: absolute;
   bottom: 10px;
   right: 10px;
-  z-index: 2; /* Ensure it's above the pseudo-elements */
+  z-index: 2;
   border-radius: 10px;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 .button-85:before {
@@ -94,7 +85,7 @@
   top: -2px;
   left: -2px;
   background-size: 400%;
-  z-index: 1; /* Lower than the button itself */
+  z-index: 1;
   filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
@@ -124,5 +115,57 @@
   left: 0;
   top: 0;
   border-radius: 10px;
-  z-index: 0; /* Keep it below the button */
+  z-index: 0;
+}
+
+/* ✅ Mobile-Friendly Styles */
+@media screen and (max-width: 768px) {
+  .service-card {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .try h2 {
+    font-size: 1.2rem;
+  }
+
+  .try p {
+    font-size: 0.95rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .button-85 {
+    font-size: 0.9rem;
+    padding: 0.5em 1.2em;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-image {
+    height: 140px;
+  }
+
+  .try {
+    padding: 1rem;
+  }
+
+  .try h2 {
+    font-size: 1rem;
+  }
+
+  .try p {
+    font-size: 0.85rem;
+  }
+
+  .button-85 {
+    font-size: 0.8rem;
+    padding: 0.4em 1em;
+    max-width: 7rem;
+  }
 }
