@@ -6,6 +6,7 @@
 }
 
 .wrapper-reg {
+  display: flex;
   position: relative;
   margin: 120px auto;
   width: 420px;
@@ -25,7 +26,7 @@
   .wrapper-reg {
     width: 90%;
     padding: 15px;
-    margin: 60px auto;
+    margin: 120px auto;
   }
 }
 

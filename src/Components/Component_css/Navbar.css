@@ -152,6 +152,16 @@
       padding: 1rem 0;
       z-index: 9999;
   }
+  .logo{
+    margin-left: -1px;
+  }
+  .components .nav-avatar{
+    height: 40%;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    position: relative; /* For dropdown positioning */
+  }
 
   .links.active {
       display: flex;
@@ -163,11 +173,13 @@
 
   .search-box {
       display: flex;
-      width: 10rem;
+      width: 14.2rem;
       margin-right: -1rem;
       text-align: center;
       padding: 7px;
       padding-top: 9px;
+      height: 2rem;
+      margin-top: 2px;
   }
 }
 
