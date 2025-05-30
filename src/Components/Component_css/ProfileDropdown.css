@@ -1,14 +1,12 @@
 .dropDown-container{
     color: black;
-    /* position: absolute; */
     float: right;
     display: flex;
     background: white;
-    margin-top: 5rem;
-    margin-right: 1rem;
+    
+    margin-right: 1.1rem;
     margin-left: 1rem;
-    /* margin-bottom: 5rem; */
-    width: 11rem;
+    width: 15rem;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -33,7 +31,7 @@
 }
 
 .dropDown-container img{
-    width: 30px;
+    width: 40px;
 }
 .dropDown-container li{
     list-style: none;
@@ -56,4 +54,43 @@
     /* border-radius: 10px; */
     /* transform: scale(1.2); */
     /* transition: transform 0.3s ease-in-out; */
+}
+
+/* Hide these new mobile-only items on desktop */
+/* Hide mobile-only items on desktop */
+.mobile-only {
+  display: none;
+}
+
+/* Show mobile-only items on smaller screens with consistent styling */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-only li {
+    list-style: none;
+    font-size: 1.5pc; /* same as others */
+    margin-left: 12px; /* same as others */
+    color: black;
+  }
+
+  .mobile-only a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .mobile-only:hover {
+    background-color: #f1c40f;
+  }
+
+  /* Icon size same as existing ones */
+  .mobile-only img {
+    width: 40px;
+  }
 }

@@ -116,21 +116,21 @@ const Navbar = () => {
                     <div className='links'>
                         <label><NavLink to='/home'>Home</NavLink></label>
                         <label><NavLink to='/services'>Services</NavLink></label>
-                        <label><NavLink to='/seller'>Service Provider</NavLink></label>
+                        <label><NavLink to='/seller'>Provider</NavLink></label>
                     </div>
-                    <div className='cart-logo' onClick={() => navigate('/cart')}>
+                    {/* <div className='cart-logo' onClick={() => navigate('/cart')}>
                         <i className="fa-solid fa-cart-shopping "></i>
                         <label></label>
-                    </div>
+                    </div> */}
                     <div className='search-box'>
                         <input
                             type="text"
-                            placeholder="TYPE THE SERVICE NAME & PRESS 'ENTER'"
+                            placeholder="Search here 🔎"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             onKeyDown={handleSearchKeyDown}
                         />
-                        <img src={SearchLogo} alt='search' className='search-icon' />
+                        {/* <img src={SearchLogo} alt='search' className='search-icon' /> */}
                     </div>
                     <img className="nav-avatar" src={NavAvatar} onClick={() => setOpenProfie((prev) => !prev)} />
                 </span>

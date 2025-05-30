@@ -1,160 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-.check{
-    width: 100%;
-    height: 100vh; 
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.check {
+    width: 100%;
+    height: 100vh;
     background-image: url('../../Images/homep.PNG');
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(8px); 
+    filter: blur(8px);
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; 
-    
+    z-index: -1;
 }
-.wrapper{
+
+.wrapper {
     position: relative;
-    margin: 100px auto;
-    width: 420px;
-    height: 450px;
-    background: rgba(255, 255, 255, 0.2); 
+    margin: 12rem auto;
+    max-width: 25rem;
+    width: auto;
+    height: auto;
     border-radius: 10px;
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center; 
-
-    z-index: 1; 
-    backdrop-filter: blur(10px); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    overflow: hidden;
+    justify-content: center;
+    z-index: 1;
+    backdrop-filter: none;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible; /* Optional */
     transition: height 0.2s ease;
-    } 
+}
 
 
 
-.wrapper .form-box{
-     width: 100%;
-     padding: 40px 40px;
-     border-radius: 10px;
-
+.wrapper .form-box {
+    width: 101%;
 }
 
 .wrapper .form-box.login {
-    transition: translate .18s ease;
-    translate: 0;
     background-color: rgb(3, 48, 72);
-    z-index: 1111111111111111111;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.wrapper.active .form-box.login {
-    transition: none;
-    translateX: -400px;
-}
-
-.wrapper .form-box.register{
-    position: absolute;
-    transition: none;
-    translate: 400px;
-} 
-
-.wrapper.active .form-box.register {
-    transition: translate .18s ease;
-    translate: 0;
-}
-
-form h1{
-    font-size: 36px;
+form h1 {
+    font-size: 28px;
     text-align: center;
 }
 
-form .input-box{
+form .input-box {
     position: relative;
     width: 100%;
     height: 50px;
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
-.input-box input{
+.input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255,255,255, .1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
-    cursor: pointer;
-    padding-left: 15px;
+    padding: 0 45px 0 15px;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder {
     color: #fff;
-    
 }
 
-.input-box .icon{
+.input-box .icon {
     position: absolute;
-    right: 20px;
+    right: 15px;
     top: 50%;
-    translate: 0 -50%;
-    font-size: 20px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    margin-top: 3%;
 }
 
-form .remember-forgot{
+form .remember-forgot {
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin: -10px 0 20px;
 }
 
-.remember-forgot label input{
+.remember-forgot label input {
     accent-color: #fff;
-    margin-right: 4px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-right: 6px;
+    margin-top: 2vh;
 }
 
-.remember-forgot a{
+.remember-forgot a {
     color: #fff;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 2vh;
 }
 
-.remember-forgot a:hover{
+.remember-forgot a:hover {
     text-decoration: underline;
 }
 
-form button{
+form button {
     width: 100%;
     height: 45px;
     background: #fff;
     border: none;
-    outline: none;
     border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0, .1);
     cursor: pointer;
     font-size: 16px;
     color: #333;
     font-weight: 700;
 }
 
-form .register-link{
-    font-size: 14.5px;
+form .register-link {
+    font-size: 14px;
     text-align: center;
-    margin: 20px 0 15px;
+    margin: 20px 0 10px;
 }
 
-.register-link p a{
+.register-link p a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover{
+.register-link p a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Media Query */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        margin: 60px 10px;
+        padding: 15px;
+        width: 95%;
+    }
+
+    form h1 {
+        font-size: 24px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+        padding-right: 40px;
+    }
+
+    .input-box .icon {
+        font-size: 16px;
+    }
+
+    form button {
+        height: 42px;
+        font-size: 15px;
+    }
+}
