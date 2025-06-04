@@ -80,9 +80,9 @@ const ServicesPage = (props) => {
         <div className="modal">
           <div className="overlay" onClick={() => toggleModal(modalId)}></div>
           <div className="modal-content">
-            <button onClick={() => toggleModal(modalId)} className="close-modal-btn" style={{marginLeft:"90vh", marginTop:'3vh', cursor:"pointer"}}>
+            {/* <button onClick={() => toggleModal(modalId)} className="close-modal-btn" style={{marginLeft:"90vh", marginTop:'3vh', cursor:"pointer"}}>
               <i className="fa-solid fa-xmark"></i>
-            </button>
+            </button> */}
             <PopupCard category={modalId} fetchedData={fetchedData} /> {/* Pass selected category to PopupCard */}
           </div>
         </div>

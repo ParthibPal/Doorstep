@@ -94,6 +94,9 @@
   justify-content: flex-start;
   gap: 1.5rem;
   margin-top: 1rem;
+  text-align: center;
+  justify-content: center;
+  font-display: flex;
 }
 
 .popupcardcontents-btn button {
@@ -106,12 +109,14 @@
   cursor: pointer;
   border: none;
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+ 
 }
 
 .popupcardcontents-btn .call {
   background-color: white;
   color: #f1c40f;
   border: 2px solid #f1c40f;
+  max-width: 7.5rem;
 }
 
 .popupcardcontents-btn .call:hover {
