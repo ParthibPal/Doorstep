@@ -188,7 +188,7 @@ const HomeCards = (props) => {
           {
             title: 'Frequently Used',
             items: [
-              { image: ElectricalNeeds, text: 'Electrician' },
+              { image: ElectricalNeeds, text: 'Electrician Services' },
               { image: BodymessageNeeds, text: 'Message therapy' },
               { image: LawncareNeeds, text: 'Lawncare Services' },
             ],

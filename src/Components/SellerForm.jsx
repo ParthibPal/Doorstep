@@ -187,43 +187,53 @@ const SellerForm = () => {
             </div>
 
             {step === 2 && (
-                <div className="passContainer" style={{ marginTop: "3vh" }}>
-                    <div className='password-img'>
-                        <img src={PassCreation} alt='Password setup' />
-                    </div>
-                    <div className="passwordCreation">
-                        <h2>Choose your secret password secretly</h2>
-                        <p>You will use this password to Sign In to Door Step.</p>
-                        <form className="setPassword" onSubmit={handlePasswordSubmit}>
-                            <h3>Enter your name: </h3>
-                            <input
-                                type='text'
-                                placeholder='Enter name'
-                                value={name}
-                                onChange={(e) => setName(e.target.value)} />
-                            <h3>Enter your password: </h3>
-                            <input
-                                type='password'
-                                placeholder='Enter Password'
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)} />
-                            <h3>Confirm  your password: </h3>
-                            <input
-                                type='password'
-                                placeholder='Confirm Your Password'
-                                value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)} />
-                            <h3>Password requirements</h3>
-                            <ul>
-                                <li>must be at least 5 characters</li>
-                                <li>must be fewer than 10</li>
-                                <li>must be different from email address</li>
-                            </ul>
-                            <button type='submit'>Submit</button>
-                        </form>
-                    </div>
-                </div>
-            )}
+  <div className="passContainer" style={{ marginTop: "3vh" }}>
+    <div className="passwordImage">
+      <img src={PassCreation} alt="Password setup" />
+    </div>
+
+    <div className="passwordCreation">
+      <h2>Choose your secret password secretly</h2>
+      <p>You will use this password to Sign In to Door Step.</p>
+
+      <form className="setPassword" onSubmit={handlePasswordSubmit}>
+        <h3>Enter your name:</h3>
+        <input
+          type="text"
+          placeholder="Enter name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <h3>Enter your password:</h3>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <h3>Confirm your password:</h3>
+        <input
+          type="password"
+          placeholder="Confirm Your Password"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
+
+        <h3>Password requirements</h3>
+        <ul>
+          <li>must be at least 5 characters</li>
+          <li>must be fewer than 10</li>
+          <li>must be different from email address</li>
+        </ul>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+)}
+
 
             {step === 3 && (
                 <div className="sellerLogin" >

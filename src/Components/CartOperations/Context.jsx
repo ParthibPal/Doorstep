@@ -18,17 +18,7 @@ const Context = ({ children }) => {
         { img: "/images/Rajdeep.jpg", name: "Rajdeep Patra", phone: "6290671725", location: "Maniktala", salesdata: "532", rating: "3.5", price: "629",id:'5' }
     ];
 
-    // const products = [...Array(20)].map(() => ({
-
-    //     email: faker.internet.email(),
-    //     name: faker.person.fullName(),
-    //     city: faker.location.city(),
-
-
-
-    // }));
-
-    // const products = Array.from({ length: 20 }, () => productList[Math.floor(Math.random() * productList.length)]);
+    
 
 
     const products = Array.from({ length: 5 }, (_, index) => productList[index % productList.length]);
