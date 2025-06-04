@@ -28,7 +28,7 @@ const CustomerSupport = () => {
     return (
 
         <div className='customersupport-wrapper'>
-            <header>
+            <header className='header'>
                 <a href='#section1'>Contact us</a>
                 <a href='#section2'>Help & Support</a>
                 <a href='#section3'>Review / Feedback</a>
