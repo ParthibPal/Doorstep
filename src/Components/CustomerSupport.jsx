@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Component_css/CustomerSupport.css'
 
-
 import ContactusCover from '../Images/Contactus-Cover.png'
 import Start from '../Images/Helpcard-Start.png'
 import Account from '../Images/Helpcard-Account.png'
@@ -20,13 +19,8 @@ import Samrat from '../Images/Samrat.jpg'
 import Softy from '../Images/Softy.jpg'
 import Supriti from '../Images/Supriti.jpg'
 
-
-
-
-
 const CustomerSupport = () => {
     return (
-
         <div className='customersupport-wrapper'>
             <header className='header'>
                 <a href='#section1'>Contact us</a>
@@ -34,24 +28,23 @@ const CustomerSupport = () => {
                 <a href='#section3'>Review / Feedback</a>
                 <a href='#section4'>About Us</a>
             </header>
+
             <section id='section1'>
                 <img src={ContactusCover} />
                 <div className='contact'>
                     <div className='call'>
-                        <i class="fa-solid fa-phone"></i>
+                        <i className="fa-solid fa-phone"></i>
                         <h2>Talk to Customer Service</h2>
                         <label>Having problem? Feel free to contact with our customer executives.</label>
                         <h3>+91-123456789</h3>
                     </div>
                     <div className='chat'>
-                        <i class="fa-solid fa-comments"></i>
+                        <i className="fa-solid fa-comments"></i>
                         <h2>Contact Customer Support</h2>
                         <label>Sometimes you need a little help from your friends. Don't worry...we are here for you.</label>
                         <h3>Chat with us</h3>
                     </div>
                 </div>
-
-
             </section>
 
             <hr className='customer-support-hr' />
@@ -113,12 +106,10 @@ const CustomerSupport = () => {
 
             <hr className='customer-support-hr' />
 
-
             <section id='section3'>
                 <div className='section3-heading'>Reviews</div>
 
                 {/* Review Part */}
-
                 <div className='review-container'>
                     <div className='review-card'>
                         <div className='review-dp-container' >
@@ -126,72 +117,70 @@ const CustomerSupport = () => {
                         </div>
                         <div className='review-name-star'>
                             <label>Parthib Pal</label>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
                         </div>
                         <div className='review-description'>
                             Very bad website not optimized. Faltu website, er theke valo ami ek dine baniye debo vai. Ke developer etar faltu ekebare se kaj korte jane adou? 🤦‍♂️🤦‍♂️
                         </div>
-
                     </div>
+
                     <div className='review-card'>
                         <div className='review-dp-container' >
                             <img className='review-dp' src={Softy} />
                         </div>
                         <div className='review-name-star'>
                             <label>Softy Sharma</label>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
                         </div>
                         <div className='review-description'>
                             I strongly agree with Mr. Parthib Pal's opinion, I faced some optimization problems in this website, but they will fix it I know. 🫡🫡
                         </div>
-
                     </div>
+
                     <div className='review-card'>
                         <div className='review-dp-container' >
                             <img className='review-dp' src={Supriti} />
                         </div>
                         <div className='review-name-star'>
                             <label>Supriti Das</label>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
                         </div>
                         <div className='review-description'>
                             Ha ekdom i baje website!! Report mere ban kora hok eto baje website k. 🤢🤢🤢🤢
                         </div>
-
                     </div>
+
                     <div className='review-card'>
                         <div className='review-dp-container' >
                             <img className='review-dp' src={Samrat} />
                         </div>
                         <div className='review-name-star'>
                             <label>Samrat Kumar</label>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
-                            <i class="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
+                            <i className="fa-solid fa-star checked"></i>
                         </div>
                         <div className='review-description'>
                             Hebi website vai!! Amr system to sera cholche... developer k keu Noble de!!😊😊😊
                         </div>
-
                     </div>
                 </div>
 
                 {/* Feedback Part */}
-
                 <div className='section3-heading'>Submit your Feedback</div>
                 <div className='review-submit-container'>
                     <h1>Feel free to share your opinion</h1>
@@ -201,19 +190,15 @@ const CustomerSupport = () => {
                         <h3>Email Id</h3>
                         <input className='review-input-email' placeholder='Enter your email-id here' />
                         <h3>Review</h3>
-                        <input className='review-input-opinion' placeholder='Your opibion matters for us' />
-                        <button class="review-submit-button">Submit</button>
+                        <input className='review-input-opinion' placeholder='Your opinion matters for us' />
+                        <button className="review-submit-button">Submit</button>
                     </div>
                 </div>
-
-
             </section>
 
             <hr className='customer-support-hr' />
 
-
             <section id='section4'>
-
                 <div className="top">
                     <img src={AboutusCover} />
                 </div>
@@ -273,19 +258,14 @@ const CustomerSupport = () => {
 
                     <section className="our-mission">
                         <h2>Our Mission</h2>
-                        <hr/>
+                        <hr />
                         <p>
                             Our mission is to empower communities by delivering top-quality services that enhance daily life. We are dedicated to creating lasting value for our customers, employees, and partners through a culture of excellence and innovation.
                         </p>
                     </section>
                 </div>
-
-
-
-
             </section>
         </div>
-
     )
 }
 

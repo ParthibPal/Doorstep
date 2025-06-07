@@ -1,59 +1,55 @@
+/* ----------- Layout Container ----------- */
 .seller {
-  /* background-color: #f9e9a7; */
   display: flex;
-  /* gap: 5rem; */
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  height: auto;
   font-family: "Poppins", sans-serif;
+  padding: 2rem 1rem;
 }
 
-.photo {
-  height: 40rem;
-  width: 160rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  /* margin-top: 5vh; */
-  /* background-color: red; */
-}
-
-.photo img {
-  height: 100%;
-  width: 110%;
-  /* object-fit: cover; */
-  /* height: auto; */
-  /* margin-left: 1rem; */
-  /* filter:drop-shadow(5px 5px red); */
-}
-
+/* ----------- Left Section Content ----------- */
 .content {
-  /* background-color: red; */
-  width: 320vh;
-  margin-left: 1rem;
-  font-weight: 200;
+  flex: 1 1 500px;
   font-size: 20px;
+  font-weight: 200;
+  margin-left: 1rem;
   margin-top: 2vh;
-
 }
 
 .content h1 {
+  font-size: 2.4rem;
   margin-bottom: 2vh;
+  font-weight: 600;
 }
 
 .content p {
   line-height: 1.6;
   font-weight: 300;
-
+  color: #333;
 }
 
+/* ----------- Right Image Section ----------- */
+.photo {
+  flex: 1 1 400px;
+  max-width: 600px;
+  height: auto;
+  margin: 2rem auto;
+}
 
+.photo img {
+  width: 100%;
+  height: auto;
+}
 
+/* ----------- Call to Action ----------- */
 .cta-form {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  gap: 1rem;
 }
 
 .cta-form span {
@@ -62,104 +58,102 @@
   font-size: 1rem;
   border: 2px solid #ddd;
   border-radius: 5px;
-  margin-right: 10px;
   outline: none;
   margin-top: 1.5rem;
-  
 }
 
 .cta-form button {
   padding: 12px 20px;
-  margin-top: 1.5rem;
   font-size: 1.1rem;
   color: black;
-  /* background-color: #007bff; */
   background: #f1c40f;
-  /* border: 3px solid #f1c40f; */
   border: none;
-  /* background: linear-gradient(180deg, #e74c3c, #f1c40f); */
-
   border-radius: 5px;
+  margin-top: 1.5rem;
   cursor: pointer;
-  /* transition: background-color 0.3s ease; */
+  transition: transform 0.2s ease;
 }
 
-
-
-.features li p{
-  font-size: 18px;
-  height: 5rem;
+.cta-form button:hover {
+  transform: scale(1.05);
 }
 
-
+/* ----------- Features Section ----------- */
 .features ul {
-  /* background-color: red; */
-  margin-right: 7rem;
-  list-style-type: none;
-  margin-left: 1rem;
+  list-style: none;
+  margin: 4vh 1rem 0 1rem;
+  padding: 0;
   z-index: 1000000;
-  margin-top: 4vh;
-
 }
 
 .features li {
+  display: flex;
+  align-items: center;
   background-color: #f9e9a7;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 5vh;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.416);
-  cursor: pointer;
+  border-radius: 10px;
   height: 8vh;
   width: 20vw;
-  align-items: center;
-  justify-content: center;
   padding: 3rem;
-  display: flex;
-  border-radius: 10px;
-
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.features li:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 8px rgba(100, 100, 111, 0.25);
+}
 
+.feature-item {
+  display: flex;
+  align-items: center;
+}
 
 .feature-item img {
   width: 8vh;
-  margin-left: 1rem;
   height: 8vh;
-
+  margin-right: 1rem;
 }
 
 .feature-item p {
   font-size: 1.3rem;
   color: #333;
-
 }
 
+/* ----------- Info Section ----------- */
 .info {
-  /* background-color: red; */
   margin-left: 1rem;
   margin-right: 1%;
   margin-top: 5vh;
   font-family: "Poppins", sans-serif;
-
 }
 
 .info p {
   margin-top: 1rem;
-  font-size: 1.3rem;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
-  font-size: 20px;
 }
 
+/* ----------- Steps Section ----------- */
 .steps {
-  /* background-color: rgb(0, 255, 55); */
   display: flex;
-  /* gap: 10px; */
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 3rem;
-  width: auto;
-  height: auto;
+  gap: 2rem;
+}
 
+.step1 {
+  width: 20rem;
+  text-align: center;
+}
+
+.step1 h3 {
+  font-size: 25px;
+  color: #e67e22;
 }
 
 .steps img {
@@ -168,90 +162,50 @@
   object-fit: cover;
   border-radius: 10px;
   border: 1px solid black;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.step1 {
-  /* background-color: #00e1e9; */
-  width: 20rem;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.step1 h3 {
-  font-size: 25px;
-  color: #e67e22;
-  /* -webkit-text-stroke: .5px black; */
-  /* text-shadow: 2px 2px 4px #000000; */
-}
-
-
+/* ----------- Responsive Styles ----------- */
 @media (max-width: 1024px) {
   .seller {
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
   }
 
-  .content {
-    width: 90vw;
-    font-size: 1rem;
-  }
-
+  .content,
   .photo {
     width: 90vw;
-    height: auto;
-    margin: 2rem auto;
-  }
-
-  .photo img {
-    width: 100%;
-    height: auto;
   }
 
   .cta-form {
     flex-direction: column;
     align-items: stretch;
-    text-align: center;
   }
 
   .cta-form span,
   .cta-form button {
     width: 100%;
-    margin-top: 1rem;
   }
 
   .features ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 0 auto;
   }
 
   .features li {
     width: 80vw;
-    height: auto;
     flex-direction: row;
-  }
-
-  .feature-item img {
-    margin-right: 1rem;
-  }
-
-  .steps {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .step1 {
-    width: 80vw;
+    height: auto;
   }
 
   .steps img {
     width: 100%;
     max-width: 300px;
     height: auto;
+  }
+
+  .step1 {
+    width: 80vw;
   }
 }
 
