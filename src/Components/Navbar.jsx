@@ -114,9 +114,9 @@ const Navbar = () => {
                         <img src={title} />
                     </div>
                     <div className='links'>
-                        <label><NavLink to='/home'>Home</NavLink></label>
-                        <label><NavLink to='/services'>Services</NavLink></label>
-                        <label><NavLink to='/seller'>Provider</NavLink></label>
+                        <label><NavLink to='/Doorstep/home'>Home</NavLink></label>
+                        <label><NavLink to='/Doorstep/services'>Services</NavLink></label>
+                        <label><NavLink to='/Doorstep/seller'>Provider</NavLink></label>
                     </div>
                     {/* <div className='cart-logo' onClick={() => navigate('/cart')}>
                         <i className="fa-solid fa-cart-shopping "></i>
