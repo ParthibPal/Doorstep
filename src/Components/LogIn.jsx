@@ -10,40 +10,32 @@ const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate(); // For redirecting after successful signup
-
+    const [loading, setLoading] = useState(false); // loading
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         axios.post('https://doorstep-backend-yesa.onrender.com/signin', { email, password })
             .then(result => {
-                var state = 0;
-                // console.log(result);
                 localStorage.setItem('loggedInEmail', email);
-                // console.log(localStorage.getItem('loggedInEmail'));
 
                 if (result.data === "success") {
-                    // state = 1;
-                    // console.log(state)
                     toast.success("Log In Successful! 🎉", { autoClose: 2000 });
-                    <Card user={email} />
                     localStorage.setItem('login', true);
-                    // window.alert("Log In Sucessful");
                     navigate('/home');
-
                 } else {
-                    // state = 0;
-                    // console.log(state)
-
                     window.alert("Wrong Credential");
                 }
-
-
             })
             .catch(err => {
-
                 console.log(err);
+                toast.error("Something went wrong!");
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }
+
 
 
     return (
@@ -85,7 +77,12 @@ const LogIn = () => {
                             <a href="#">Forgot Password?</a>
                         </div>
 
-                        <button type="submit">Login</button>
+                        {/* <button type="submit">Login</button> */}
+                        <button type="submit" disabled={loading}>
+                        {loading ? <div className="loader"></div> : <button type="submit">Login</button>}
+
+                        </button>
+
 
                         <div className="register-link">
                             <p>Don't have an account? <Link to="/logup">Sign Up </Link></p>
