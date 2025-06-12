@@ -8,7 +8,7 @@
 
 - 🛒 Easy-to-use service access interface
 - ⚙️ Backend API for service data and user operations
-- 💬 Real-time updates (if applicable)
+- 💬 Real-time updates
 - 🌐 Live deployment (frontend + backend)
 - 🎯 Clean and responsive UI
 
@@ -37,16 +37,16 @@
 
 ## 🌐 Live Demo
 
-- **Frontend**: [DoorStep Live - GitHub Pages]
-- **Backend**: [DoorStep API - Render]
+- **Frontend**: [DoorStep Live - GitHub Pages](https://parthibpal.github.io/Doorstep/)
+- **Backend**: [DoorStep API - Render](https://doorstep-backend-yesa.onrender.com)
 
 
 ---
 
 ## 🌍 Deployment
 
-✅ **Frontend** deployed on [GitHub Pages]  
-✅ **Backend** deployed on [Render]
+✅ **Frontend** deployed on [GitHub Pages](https://parthibpal.github.io/Doorstep/)
+✅ **Backend** deployed on [Render](https://doorstep-backend-yesa.onrender.com)
 
 The frontend communicates seamlessly with the backend using the hosted API on Render.
 
