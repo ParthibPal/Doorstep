@@ -3,7 +3,6 @@ import './Main.css';
 import Router from './Router';
 import Footer from '../Components/ActualComponent/Footer';
 import { Toaster } from 'react-hot-toast';
-
 const Main = () => {
   return (
     <>

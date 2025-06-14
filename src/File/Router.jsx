@@ -39,6 +39,7 @@ const Router = () => {
         <Route path='/Doorstep/' element={<LogIn />} />
         <Route path='/logup' element={<LogUp />} />
       </Routes>
+  
     </BrowserRouter>
 
 
