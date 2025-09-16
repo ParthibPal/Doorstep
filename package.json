@@ -1,9 +1,19 @@
 {
   "name": "doorstep-main",
+  "private": true,
   "scripts": {
+    "install-all": "npm install && cd DoorstepFrontend && npm install && cd ../DoorstepBackend && npm install",
+
     "frontend": "cd DoorstepFrontend && npm run dev",
     "backend": "cd DoorstepBackend && nodemon server.js",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+
+    "build-frontend": "cd DoorstepFrontend && npm run build",
+
+    "start-backend": "cd DoorstepBackend && npm start",
+
+    "start": "npm run build-frontend && npm run start-backend"
   },
   "dependencies": {
     "concurrently": "^9.0.0"
