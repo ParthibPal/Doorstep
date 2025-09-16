@@ -15,47 +15,47 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 // Import images
-import CleaningServices from '../Images/Cleaning-Services.png';
-import CarpetcleaningServices from '../Images/Carpetcleaning-Services.png';
-import ComputerrepairServices from '../Images/Computerrepair-Services.png';
-import ElectricianServices from '../Images/Electrician-Services.png';
-import EventplanningServices from '../Images/Eventplanning-Services.png';
-import FitnessServices from '../Images/Fitness-Services.png';
-import GraphicdesignServices from '../Images/Graphicdesign-Services.png';
-import HandymanServices from '../Images/Handyman-Services.png';
-import InteriordesignServices from '../Images/Interiordesign-Services.png';
-import LawncareServices from '../Images/Lawncare-Services.png';
-import LegalServices from '../Images/Legal-Services.png';
-import MessagetherapyServices from '../Images/Messagetherapy-Services.png';
-import MovingServices from '../Images/Moving-Services.png';
-import PhotographyServices from '../Images/Photography-Services.png';
-import PaintingServices from '../Images/Painting-Services.png';
-import PlumbingServices from '../Images/Plumbing-Services.png';
-import TutorServices from '../Images/Tutor-Services.png';
-import MoreServices from '../Images/More-Services.png';
-import HouseCleaning from '../Images/House-Cleaning.jpg';
-import CarpetCleaning from '../Images/Carpet-Cleaning.jpg';
-import CarCleaning from '../Images/Car-Cleaning.jpg';
-import ComputerRepair from '../Images/Computer-Repair.jpg';
-import PlumbingRepair from '../Images/Plumbing-Repair.jpg';
-import HandymanRepair from '../Images/Handyman-Repair.jpg';
-import LegalService from '../Images/Legal-Service.jpg';
-import MovingService from '../Images/Moving-Service.jpg';
-import TutorService from '../Images/Tutor-Service.jpg';
-import ElectricalNeeds from '../Images/Electrical-Needs.jpg';
-import BodymessageNeeds from '../Images/Bodymessage-Needs.jpg';
-import LawncareNeeds from '../Images/lawncare-Needs.jpg';
-import PersonalStylist from "../Images/PersonalStylist.jpg"
-import LanguageLessons from "../Images/Language Lessons.jpg"
+import CleaningServices from '../images/Cleaning-Services.png';
+import CarpetcleaningServices from '../images/Carpetcleaning-Services.png';
+import ComputerrepairServices from '../images/Computerrepair-Services.png';
+import ElectricianServices from '../images/Electrician-Services.png';
+import EventplanningServices from '../images/Eventplanning-Services.png';
+import FitnessServices from '../images/Fitness-Services.png';
+import GraphicdesignServices from '../images/Graphicdesign-Services.png';
+import HandymanServices from '../images/Handyman-Services.png';
+import InteriordesignServices from '../images/Interiordesign-Services.png';
+import LawncareServices from '../images/Lawncare-Services.png';
+import LegalServices from '../images/Legal-Services.png';
+import MessagetherapyServices from '../images/Messagetherapy-Services.png';
+import MovingServices from '../images/Moving-Services.png';
+import PhotographyServices from '../images/Photography-Services.png';
+import PaintingServices from '../images/Painting-Services.png';
+import PlumbingServices from '../images/Plumbing-Services.png';
+import TutorServices from '../images/Tutor-Services.png';
+import MoreServices from '../images/More-Services.png';
+import HouseCleaning from '../images/House-Cleaning.jpg';
+import CarpetCleaning from '../images/Carpet-Cleaning.jpg';
+import CarCleaning from '../images/Car-Cleaning.jpg';
+import ComputerRepair from '../images/Computer-Repair.jpg';
+import PlumbingRepair from '../images/Plumbing-Repair.jpg';
+import HandymanRepair from '../images/Handyman-Repair.jpg';
+import LegalService from '../images/Legal-Service.jpg';
+import MovingService from '../images/Moving-Service.jpg';
+import TutorService from '../images/Tutor-Service.jpg';
+import ElectricalNeeds from '../images/Electrical-Needs.jpg';
+import BodymessageNeeds from '../images/Bodymessage-Needs.jpg';
+import LawncareNeeds from '../images/lawncare-Needs.jpg';
+import PersonalStylist from "../images/PersonalStylist.jpg"
+import LanguageLessons from "../images/Language Lessons.jpg"
 
 
-import InteriorDesign from '../Images/interior-design.jpg';
-import Cleaning from '../Images/cleaning-services.jpg';
-import MusicLessons from '../Images/music-lessons.jpg';
-import EventPlanning from '../Images/event-planning.jpg';
-import Electrician from '../Images/electrician-services.jpg';
-import WebDevelopment from '../Images/web-development.jpg';
-import PhotoServices from '../Images/photo-services.jpg';
+import InteriorDesign from '../images/interior-design.jpg';
+import Cleaning from '../images/cleaning-services.jpg';
+import MusicLessons from '../images/music-lessons.jpg';
+import EventPlanning from '../images/event-planning.jpg';
+import Electrician from '../images/electrician-services.jpg';
+import WebDevelopment from '../images/web-development.jpg';
+import PhotoServices from '../images/photo-services.jpg';
 const HomeCards = (props) => {
   const navigate = useNavigate();
   const [modalId, setModalId] = useState(false);

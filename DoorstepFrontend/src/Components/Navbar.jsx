@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Component_css/Navbar.css';
 import ProfileDropdown from './ProfileDropdown';
 import { NavLink, useNavigate } from 'react-router-dom';
-import title from '../Images/title.png';
-import SearchLogo from '../Images/search-b.png';
+import title from '../images/title.png';
+import SearchLogo from '../images/search-b.png';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import NavAvatar from "../Images/nav-avatar.png"
+import NavAvatar from "../images/nav-avatar.png"
 const Navbar = () => {
     const navigate = useNavigate();
     const [openProfile, setOpenProfie] = useState(false);

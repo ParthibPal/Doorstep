@@ -1,14 +1,14 @@
 import React from 'react';
 import "./Component_css/ProfileDropdown.css";
-import SettingsIcon from "../Images/settingsIcon.png";
-import LogoutIcon from "../Images/logoutIcon.png";
-import DashboardIcon from "../Images/dashboardIcon.png";
-import CartIcon from "../Images/cartIcon.png";
-import ProfileIcon from "../Images/profileIcon.png";
-import CustomersupportIcon from "../Images/cussupportIcon.png";
-import HouseIcon from "../Images/house.png";
-import ServicesIcon from "../Images/service.png";
-import MaintenanceIcon from "../Images/maintenance.png";
+import SettingsIcon from "../images/settingsIcon.png";
+import LogoutIcon from "../images/logoutIcon.png";
+import DashboardIcon from "../images/dashboardIcon.png";
+import CartIcon from "../images/cartIcon.png";
+import ProfileIcon from "../images/profileIcon.png";
+import CustomersupportIcon from "../images/cussupportIcon.png";
+import HouseIcon from "../images/house.png";
+import ServicesIcon from "../images/service.png";
+import MaintenanceIcon from "../images/maintenance.png";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 

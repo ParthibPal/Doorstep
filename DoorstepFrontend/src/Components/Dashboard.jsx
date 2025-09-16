@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import "../Components/Component_css/Dashboard.css";
 import { format } from 'date-fns';
-import DashIcon from "../Images/dashboard.png";
-import dasboardusers from "../Images/dasboard-users.png";
-import dasboardsales from "../Images/dasboard-sales.png";
+import DashIcon from "../images/dashboard.png";
+import dasboardusers from "../images/dasboard-users.png";
+import dasboardsales from "../images/dasboard-sales.png";
 
 const Dashboard = () => {
     const [dashboardData, setDashboardData] = useState({

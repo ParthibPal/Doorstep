@@ -2,9 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import './Component_css/Admin.css'
 // import SellerTempCollection from '../../../server/Backend/models/SellerFormModel';
-import orders from '../Images/admin-orders.png';
-import seller from '../Images/admin-seller.png';
-import customers from '../Images/admin-customers.png';
+import orders from '../images/admin-orders.png';
+import seller from '../images/admin-seller.png';
+import customers from '../images/admin-customers.png';
 
 const Admin = () => {
     //state to store user data
@@ -172,12 +172,12 @@ const Admin = () => {
 
 
                                         <td>
-                                            {provider.imageSrc ? (
+                                            
+                                        {provider.imageSrc ? (
                                                 <img src={provider.imageSrc} alt='Provider' style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
                                             ) : (
                                                 "No Image"
                                             )}
-
                                         </td>
                                         {/* <td><button className='admin-action-btn'><i class="fa-solid fa-trash admin-action-icon"></i></button>
                                     <button className='admin-action-btn'><i class="fa-solid fa-trash admin-action-icon"></i></button></td> */}
