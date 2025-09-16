@@ -6,11 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "start": "nodemon index.js"
+    "start": "vite build && node ../DoorstepBackend/server.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.1",
@@ -36,25 +33,23 @@
     "react-toastify": "^11.0.5",
     "redis": "^5.0.0",
     "swiper": "^11.1.10",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "vite": "^6.3.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "autoprefixer": "^10.4.21",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "gh-pages": "^6.3.0",
-    "globals": "^15.9.0",
-    "postcss": "^8.5.6",
-  
-    "vite": "^6.2.1"
+    "globals": "^15.9.0"
   },
-  "description": "**DoorStep** is a simple, full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js), designed to bring essential services and information to users right at their fingertips — literally at their doorstep.",
-  "main": "eslint.config.js",
+  "description": "**DoorStep** is a simple, full-stack web application built using the MERN stack.",
   "author": "",
   "license": "ISC"
 }

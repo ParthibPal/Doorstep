@@ -124,7 +124,7 @@ app.use("/api/sales-table", salesRoutes);
 // ============================
 // Serve Frontend (Production)
 // ============================
-const frontendPath = path.join(__dirname, "../Frontend/dist");
+const frontendPath = path.join(__dirname, "../DoorstepFrontend/dist");
 
 app.use(express.static(frontendPath));
 
