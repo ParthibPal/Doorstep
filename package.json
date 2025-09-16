@@ -2,7 +2,8 @@
   "name": "doorstep-main",
   "private": true,
   "scripts": {
-    "install-all": "npm install && cd DoorstepFrontend && npm install && cd ../DoorstepBackend && npm install",
+    "install-all": "cd DoorstepFrontend && npm install && cd ../DoorstepBackend && npm install",
+
 
     "frontend": "cd DoorstepFrontend && npm run dev",
     "backend": "cd DoorstepBackend && nodemon server.js",
