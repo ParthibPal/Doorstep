@@ -7,7 +7,7 @@ import taskIcon from '../images/task.png';
 import performanceAnalyticsIcon from '../images/performance-analytics.png';
 import interactionIcon from '../images/interaction.png';
 import supportIcon from '../images/technical-support.png';
-import SellerBg from "../Images/SellerBg.png";
+import SellerBg from "../images/SellerBg.png";
 
 import CreateAccount from '../images/CreateAccount.png';
 import ListItems from '../images/ListItems.jpg';
