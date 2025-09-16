@@ -1,7 +1,7 @@
 import React from 'react';
 import './ActualComponent_css/PopupCard.css';
 import PopupcardContents from './PopupcardContents';
-import servicepopuplogo from '../../Images/service-popup-logo.png';
+import servicepopuplogo from '../../images/service-popup-logo.png';
 
 const PopupCard = ({ fetchedData }) => {  // <-- Accept prop
   // console.log('fetchedData:', fetchedData); 
