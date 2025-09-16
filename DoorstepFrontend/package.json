@@ -35,7 +35,8 @@
     "react-sticky-el": "^2.1.0",
     "react-toastify": "^11.0.5",
     "redis": "^5.0.0",
-    "swiper": "^11.1.10"
+    "swiper": "^11.1.10",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -49,7 +50,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.9.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
+  
     "vite": "^6.2.1"
   },
   "description": "**DoorStep** is a simple, full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js), designed to bring essential services and information to users right at their fingertips — literally at their doorstep.",
