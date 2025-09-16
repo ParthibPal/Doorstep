@@ -4,17 +4,19 @@
   "scripts": {
     "install-all": "cd DoorstepFrontend && npm install && cd ../DoorstepBackend && npm install",
 
-
     "frontend": "cd DoorstepFrontend && npm run dev",
     "backend": "cd DoorstepBackend && nodemon server.js",
-
     "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
 
     "build-frontend": "cd DoorstepFrontend && npm run build",
 
     "start-backend": "cd DoorstepBackend && npm start",
 
-    "start": "npm run build-frontend && npm run start-backend"
+    "start": "npm run build-frontend && npm run start-backend",
+
+    "build": "npm run build-frontend",
+
+    "clean": "rm -rf DoorstepFrontend/dist"
   },
   "dependencies": {
     "concurrently": "^9.0.0"
