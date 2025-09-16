@@ -1,0 +1,11 @@
+{
+  "name": "doorstep-main",
+  "scripts": {
+    "frontend": "cd DoorstepFrontend && npm run dev",
+    "backend": "cd DoorstepBackend && nodemon server.js",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
