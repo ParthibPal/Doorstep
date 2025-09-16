@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Card from "../Components/ActualComponent/Card.jsx";
 import "../Components/Component_css/ServicesPage.css";
 import PopupCard from './ActualComponent/PopupCard.jsx';
-import servicesheader from "../Images/services-header.png"
+import servicesheader from "../images/services-header.png"
 import toast from 'react-hot-toast';
 const ServicesPage = (props) => {
   const [modalId, setModalId] = useState(false); ///////////////////////////////////
