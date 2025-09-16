@@ -1,0 +1,235 @@
+/* ----------- Layout Container ----------- */
+.seller {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 1rem;
+}
+
+/* ----------- Left Section Content ----------- */
+.content {
+  flex: 1 1 500px;
+  font-size: 20px;
+  font-weight: 200;
+  margin-left: 1rem;
+  margin-top: 2vh;
+}
+
+.content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 2vh;
+  font-weight: 600;
+}
+
+.content p {
+  line-height: 1.6;
+  font-weight: 300;
+  color: #333;
+}
+
+/* ----------- Right Image Section ----------- */
+.photo {
+  flex: 1 1 400px;
+  max-width: 600px;
+  height: auto;
+  margin: 2rem auto;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+/* ----------- Call to Action ----------- */
+.cta-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.cta-form span {
+  padding: 12px 20px;
+  width: 27rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 1.5rem;
+}
+
+.cta-form button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: black;
+  background: #f1c40f;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-form button:hover {
+  transform: scale(1.05);
+}
+
+/* ----------- Features Section ----------- */
+.features ul {
+  list-style: none;
+  margin: 4vh 1rem 0 1rem;
+  padding: 0;
+  z-index: 1000000;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  background-color: #f9e9a7;
+  justify-content: center;
+  margin-bottom: 5vh;
+  box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.416);
+  border-radius: 10px;
+  height: 8vh;
+  width: 20vw;
+  padding: 3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.features li:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 8px rgba(100, 100, 111, 0.25);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+}
+
+.feature-item img {
+  width: 8vh;
+  height: 8vh;
+  margin-right: 1rem;
+}
+
+.feature-item p {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* ----------- Info Section ----------- */
+.info {
+  margin-left: 1rem;
+  margin-right: 1%;
+  margin-top: 5vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.info p {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ----------- Steps Section ----------- */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.step1 {
+  width: 20rem;
+  text-align: center;
+}
+
+.step1 h3 {
+  font-size: 25px;
+  color: #e67e22;
+}
+
+.steps img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+/* ----------- Responsive Styles ----------- */
+@media (max-width: 1024px) {
+  .seller {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content,
+  .photo {
+    width: 90vw;
+  }
+
+  .cta-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-form span,
+  .cta-form button {
+    width: 100%;
+  }
+
+  .features ul {
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .features li {
+    width: 80vw;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .steps img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .step1 {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .content h1,
+  .info h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .info p {
+    font-size: 1rem;
+  }
+
+  .step1 h3 {
+    font-size: 1.2rem;
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+
+  .feature-item img {
+    width: 50px;
+    height: 50px;
+  }
+}

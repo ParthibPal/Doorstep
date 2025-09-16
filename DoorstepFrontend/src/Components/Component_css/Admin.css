@@ -1,0 +1,242 @@
+.admin-container {
+    background-color: #fffde7;  /* Light cream background */
+    width: 95%;
+    max-width: 1200px;
+    margin: 7rem auto 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    font-family: "Poppins", sans-serif;
+    color: #222;  /* Dark text */
+  }
+  
+  .admin-heading {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #5cab4a;  /* Primary green */
+  }
+  
+  .admin-stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .admin-stats {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.12);
+    transition: transform 0.2s ease;
+    cursor: default;
+  }
+  
+  .admin-stats:hover {
+    transform: translateY(-5px);
+  }
+  
+  .admin-stats img {
+    height: 60px;
+    margin-right: 1.5rem;
+    user-select: none;
+  }
+  
+  .admin-stats div h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #5cab4a;  /* Primary green */
+  }
+  
+  .admin-stats div label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .admin-filter {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin: 0 auto 2rem;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    color: #5cab4a;  /* Primary green text */
+  }
+  
+  .admin-filter label {
+    flex-shrink: 0;
+  }
+  
+  .admin-services {
+    flex-grow: 1;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #5cab4a;
+    background: white;
+    color: #222;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .admin-services:hover,
+  .admin-services:focus {
+    border-color: #4a9637;  /* Slightly darker green */
+    outline: none;
+  }
+  
+  .admin-table {
+    overflow-x: auto;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+  }
+  
+  .admin-table table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 900px; /* Keep table scrollable on small screens */
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    border: 1px solid #ccc;
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: #222;
+  }
+  
+  .admin-table th {
+    background-color: #5cab4a; /* Primary green */
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  
+  .admin-table tr:nth-child(even) {
+    background-color: #f6f9f2; /* very light greenish cream */
+  }
+  
+  .admin-table tr:hover {
+    background-color: #f1c40f33; /* translucent accent yellow */
+    cursor: default;
+  }
+  
+  .admin-action-btn {
+    padding: 0.4rem 0.7rem;
+    margin: 0 0.15rem;
+    background-color: #f1c40f; /* accent yellow */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .admin-action-btn:hover {
+    background-color: #d4b30a; /* darker yellow */
+    transform: scale(1.1);
+  }
+  
+  .admin-action-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .admin-action-icon {
+    color: #222; /* dark icon color */
+    font-size: 1.1rem;
+    user-select: none;
+  }
+  
+  .noUsers {
+    text-align: center;
+    padding: 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #666;
+  }
+  
+  /* Responsive tweaks */
+  
+  @media (max-width: 900px) {
+    .admin-stats-container {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .admin-container {
+      padding: 1rem 1rem;
+    }
+    .admin-heading {
+      font-size: 2rem;
+    }
+  
+    .admin-filter {
+      max-width: 100%;
+      font-size: 1rem;
+    }
+  
+    .admin-table table {
+      min-width: 700px;
+    }
+  
+    .admin-table th,
+    .admin-table td {
+      padding: 0.5rem 0.7rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .admin-stats {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .admin-stats img {
+      margin: 0 0 0.5rem 0;
+      height: 50px;
+    }
+  
+    .admin-stats div h2 {
+      font-size: 1.5rem;
+    }
+  
+    .admin-stats div label {
+      font-size: 0.9rem;
+    }
+  
+    .admin-filter {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3rem;
+    }
+  
+    .admin-filter label {
+      font-size: 1rem;
+    }
+  
+    .admin-services {
+      width: 100%;
+    }
+  }
+  

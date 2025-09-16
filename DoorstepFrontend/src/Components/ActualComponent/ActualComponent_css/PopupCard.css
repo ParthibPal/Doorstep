@@ -1,0 +1,91 @@
+.popupcard-container {
+    background-color: #f4f4f4;
+    height: 75vh;
+    width: 120vw;
+    max-width: 900px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0 8px 16px;
+    font-family: "Outfit", sans-serif;
+    overflow: hidden; /* Hide scroll on container itself */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    z-index: 1000;
+  }
+  
+  .popupcard-heading {
+    background-color: #f9e9a7;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  }
+  
+  .popupcard-heading img {
+    height: 100%;
+    width: 4.5rem;
+    margin-right: 1rem;
+    object-fit: contain;
+  }
+  
+  .popupcard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+  
+  .popupcard-content::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  
+  .popupcard-content::-webkit-scrollbar-thumb {
+    background: #f1c40f;
+    border-radius: 4px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 700px) {
+    .popupcard-container {
+      max-width: 90vw;
+      height: 81vh;
+      padding: 1rem 0.8rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  
+    .popupcard-heading {
+      font-size: 1.3rem;
+      padding: 0 0.8rem;
+    }
+    .popupcard-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+        padding-left: 3px;
+      }
+      
+    .popupcard-heading img {
+      height: 2.8rem;
+      width: auto;
+      
+    }
+    
+  }
+  

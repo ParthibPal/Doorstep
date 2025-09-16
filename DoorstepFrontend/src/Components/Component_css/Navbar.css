@@ -1,0 +1,367 @@
+.Nav-wrapper nav {
+  background-color: rgb(3, 48, 72);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;    
+  height: 8.5vh;
+  width: 100%;
+  font-size: 80%;
+  border: none;
+  position: fixed;
+  color: white;
+  z-index: 10000;
+  top: 0;
+  padding: 0;
+}
+
+.links {
+  display: flex;
+  width: 50%;
+  text-decoration: none;
+  margin: auto;
+  overflow: hidden;
+}
+
+.links label {
+  cursor: pointer;
+  padding-inline: 30px;
+  font-size: 140%;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  color: whitesmoke;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.links a:hover{
+  /* transform: scale(1.1);  */
+  color:#f1c40f; 
+}
+
+.components {
+  position: relative; /* Important for dropdown positioning */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.logo img {
+  padding-inline: 0.5rem;
+  height: 100%;
+  width: 100%;
+
+}
+
+.cart-logo{
+  display: flex;
+  gap: 0.5rem;
+  margin: auto;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.cart-logo:hover{
+  color: #f1c40f ;
+}
+
+.search-box input{
+  padding: 1%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: black;
+  font-size: 100%;
+  width: 92%;
+}
+
+.search-box{
+  display: flex;
+  align-items: center;
+  background-color: #fffdfd;
+  padding: 0.5% 1%;
+  border-radius: 50px;
+  margin-right: 1%;
+  width: 25%;
+}
+
+.search-icon{
+  height: 15px;
+  margin-right: -100px;
+}
+
+.components-login-btn {
+  margin: auto;
+  padding: .6rem 3rem;
+  background-color: rgb(3, 48, 72);
+  border: 2px solid white ;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: .2s linear;
+}
+.components-login-btn:hover{
+  cursor: pointer;
+  border: 2px solid #f1c40f ;
+  background-color: #f1c40f;
+  color: rgb(3, 48, 72);
+}
+
+.components .nav-avatar{
+  height: 60%;
+  margin-left: 1.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+  position: relative; /* For dropdown positioning */
+}
+/* Burger menu icon */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+.search-results-box {
+  background: white;
+  width: 400px;
+  max-height: 60vh;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+/* Responsive styling */
+@media (max-width: 768px) {
+  .search-results-box {
+    width: 90%;
+  }
+  .links {
+      display: none;
+      position: absolute;
+      top: 8.5vh;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: rgb(3, 48, 72);
+      padding: 1rem 0;
+      z-index: 9999;
+  }
+  .logo{
+    margin-left: -1px;
+  }
+  .components .nav-avatar{
+    height: 40%;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    position: relative; /* For dropdown positioning */
+  }
+
+  .links.active {
+      display: flex;
+  }
+
+  .burger {
+      display: flex;
+  }
+
+  .search-box {
+      display: flex;
+      width: 14.2rem;
+      margin-right: -1rem;
+      text-align: center;
+      padding: 7px;
+      padding-top: 9px;
+      height: 2rem;
+      margin-top: 2px;
+  }
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 100%; /* Just below avatar */
+  right: 0;   /* Align right */
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  min-width: 160px;
+  z-index: 11000;
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.profile-dropdown.active {
+  display: flex;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background-color: #f1c40f;
+  color: white;
+}
+
+/* Full-screen blur overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Results box */
+/* .search-results-box {
+  background: white;
+  width: 90%;
+  max-height: 60vh;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+} */
+
+/* Each result item */
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #dac1c1;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.search-result-item .category {
+  color: gray;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.rich-result {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+}
+
+.rich-result:hover {
+  background-color: #f9f9f9;
+}
+
+.result-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-info h4{
+  margin: 0 ;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+
+.result-info .category {
+  font-size: 12px;
+  color: gray;
+}
+
+.result-info .description {
+  font-size: 13px;
+  color: #444;
+  margin-top: 4px;
+}
+
+.rich-result {
+  display: flex;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  gap: 12px;
+}
+
+.result-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+
+}
+
+.result-info {
+  flex: 1;
+}
+
+.add-to-cart-button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049;
+}
+
+.add-to-cart-button.added {
+  background-color: #4caf50;
+  color: white;
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+
+

@@ -1,0 +1,398 @@
+:root {
+    --primary-color: #007BFF;
+    --primary-color-hover: #0056b3;
+    --accent-color: #f1c40f;
+    --text-color: #333;
+    --text-light: #666;
+    --bg-light: #f9f9f9;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+  }
+  
+  .customersupport-wrapper {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-top: 7rem;
+  }
+  
+  .header {
+    display: flex;
+    position: fixed;      /* fixed makes it stay on screen always */
+    top: 0;               /* stick to the top */
+    left: 0;              /* align to left */
+    width: 100%;          /* full width */
+    justify-content: center;
+    gap: 2rem;
+    background-color: #f5f5f5;
+    padding: 1rem 2rem;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    margin-top: 4.5rem;         /* remove margin-top to avoid shifting */
+}
+  
+  .header a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .header a:hover,
+  .header a:focus-visible {
+    color: var(--primary-color-hover);
+    outline: none;
+    transform: scale(1.05);
+    background-color: #e6f0ff;
+  }
+  
+ .customersupport-wrapper section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  
+  #section1 img,
+  #section4 .top img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+    transition: transform 0.3s ease;
+    
+  }
+  
+  #section1 img:hover,
+  #section4 .top img:hover {
+    transform: scale(1.03);
+  }
+  
+  .contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  
+  .call, .chat {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
+  }
+  
+  .call:hover, .chat:hover {
+    box-shadow: 0 8px 20px var(--shadow-medium);
+    transform: translateY(-4px);
+  }
+  
+  .call i, .chat i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .customer-support-hr {
+    margin: 3rem 0;
+    border: none;
+    height: 1px;
+    background: #ccc;
+  }
+  
+  .help-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .heading-1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-color);
+  }
+  
+  .heading-2 {
+    color: var(--text-light);
+    margin-top: 0.5rem;
+    font-weight: 400;
+  }
+  
+  .help-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .help-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .help-card:hover,
+  .help-card:focus-visible {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px var(--shadow-medium);
+    outline: none;
+  }
+  
+  .help-card img {
+    height: 70px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .help-footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+  }
+  
+  .help-footer img {
+    width: 40px;
+    margin: 0 12px;
+    cursor: pointer;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+  }
+  
+  .help-footer img:hover {
+    filter: brightness(1);
+  }
+  
+  .section3-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2.5rem 0 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+  }
+  
+  .review-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .review-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .review-card:hover {
+    box-shadow: 0 8px 24px var(--shadow-medium);
+  }
+  
+  .review-dp-container {
+    text-align: center;
+  }
+  
+  .review-dp {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 8px var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .review-dp:hover {
+    box-shadow: 0 0 14px var(--primary-color);
+  }
+  
+  .review-name-star {
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+  
+  .review-name-star i.checked {
+    color: #FFD700;
+  }
+  
+  .review-description {
+    text-align: center;
+    margin-top: 0.7rem;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .review-submit-container {
+    margin-top: 3rem;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background: #f0f8ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+  }
+  
+  .review-submit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: auto;
+  }
+  
+  .review-input-name,
+  .review-input-email,
+  .review-input-opinion {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  
+  .review-input-name:focus,
+  .review-input-email:focus,
+  .review-input-opinion:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 6px var(--primary-color);
+  }
+  
+  .review-submit-button {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review-submit-button:hover,
+  .review-submit-button:focus-visible {
+    background-color: var(--primary-color-hover);
+    box-shadow: 0 0 8px var(--primary-color-hover);
+    outline: none;
+  }
+  
+  .about-us {
+    padding: 3rem 1rem 1rem;
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+  
+  .content-wrapper {
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+  
+  .about-us-content,
+  .our-services-content,
+  .meet-team,
+  .our-mission {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    width: 220px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--shadow-light);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  
+  .team-member:hover,
+  .team-member:focus-visible {
+    transform: translateY(-5px);
+    outline: none;
+    box-shadow: 0 4px 16px var(--shadow-medium);
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .our-mission hr {
+    width: 60px;
+    margin: 0.75rem auto;
+    border: 3px solid var(--primary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    header {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .help-container {
+      grid-template-columns: 1fr;
+    }
+    .customersupport-wrapper {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-color);
+        line-height: 1.5;
+        margin-top: 10rem;
+      }
+    .review-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .team-members {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-member {
+      width: 80%;
+    }
+  
+    .review-submit-container {
+      width: 90%;
+    }
+  }
+  
