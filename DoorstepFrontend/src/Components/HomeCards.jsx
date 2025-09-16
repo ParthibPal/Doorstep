@@ -44,7 +44,7 @@ import MovingService from '../Images/Moving-Service.jpg';
 import TutorService from '../Images/Tutor-Service.jpg';
 import ElectricalNeeds from '../Images/Electrical-Needs.jpg';
 import BodymessageNeeds from '../Images/Bodymessage-Needs.jpg';
-import LawncareNeeds from '../Images/Lawncare-Needs.jpg';
+import LawncareNeeds from '../Images/lawncare-Needs.jpg';
 import PersonalStylist from "../Images/PersonalStylist.jpg"
 import LanguageLessons from "../Images/Language Lessons.jpg"
 
