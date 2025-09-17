@@ -15,7 +15,7 @@ const LogIn = () => {
         e.preventDefault();
         setLoading(true);
 
-        axios.post('http://localhost:5000/signin', { email, password })
+        axios.post(`${import.meta.env.VITE_BACKEND_URL}/signin`, { email, password })
         .then(result => {
             localStorage.setItem('loggedInEmail', email);
         
