@@ -13,7 +13,10 @@ const Admin = () => {
 
     //useEfffect hook to fetch data when the component is mount
     useEffect(() => {
-        fetch("https://doorstep-backend-yesa.onrender.com/api/tempProviderDetails")   //ensure correct API endpoint
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/tempProviderDetails`, {
+            credentials: "include" // if your backend uses sessions or cookies
+          })
+             //ensure correct API endpoint
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(`Http error! Status: ${res.status}`);
@@ -46,10 +49,12 @@ const Admin = () => {
                 console.error("❌ Invalid provider ID:", providerId);
                 return;
             }
-            const response = await fetch(`https://doorstep-backend-yesa.onrender.com/api/tempProviderDetails/${providerId}`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/tempProviderDetails/${providerId}`, {
                 method: "DELETE",
-                headers: { "Content-Type": "application/json" }
-            });
+                headers: { "Content-Type": "application/json" },
+                credentials: "include" // if your backend uses sessions or cookies
+              });
+              
             const data = await response.json();  // Read response JSON
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}, Messgae: ${data.message}`);

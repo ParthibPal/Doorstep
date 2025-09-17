@@ -15,9 +15,10 @@ const AddCard = () => {
     formData.append("image", image);
 
     // Send form data to backend
-    const response = await fetch("https://doorstep-backend-yesa.onrender.com/api/cards/addCard", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/addCard`, {
       method: "POST",
       body: formData,
+      credentials: "include" // if your backend uses sessions or cookies
     });
 
     const data = await response.json();
@@ -29,7 +30,7 @@ const AddCard = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{marginTop:"200px"}}>
+    <form onSubmit={handleSubmit} style={{ marginTop: "200px" }}>
       <input type="text" placeholder="Card Name" onChange={(e) => setName(e.target.value)} required />
       <input type="text" placeholder="Description" onChange={(e) => setDesc(e.target.value)} required />
       <input type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])} required />

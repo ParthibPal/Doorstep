@@ -18,7 +18,9 @@ const Dashboard = () => {
         const fetchSalesData = async () => {
             const loggedInEmail = localStorage.getItem('loggedInEmail');
             try {
-                const response = await fetch(`https://doorstep-backend-yesa.onrender.com/api/sales-table/provider?email=${loggedInEmail}`);
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/sales-table/provider?email=${loggedInEmail}`, {
+                    credentials: "include" // if your backend uses sessions or cookies
+                  });                  
                 const sales = await response.json();
                 console.log(sales);
                 

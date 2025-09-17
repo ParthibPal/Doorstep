@@ -12,36 +12,36 @@ const PopupcardContents = (person) => {
     // Function to add item to the cart and insert into the database
     const addToCartHandler = async () => {
         try {
-            const response = await axios.post('https://doorstep-backend-yesa.onrender.com/api/cart', {
-                name: person.name,
-                img: person.img,
-                location: person.location,
-                salesdata: person.salesdata,
-                rating: person.rating,
-                serviceCost: person.serviceCost,
-                serviceName: person.serviceName,
-                description: person.description,
-                joiningdate: person.joiningdate,
-                phone: person.phone,
-                loggedInEmail: localStorage.getItem('loggedInEmail'),
-                providerEmail: person.providerEmail,
-            });
-
-            dispatch({ type: "ADD_TO_CART", payload: person });
-            toast.success("✔ Added to Cart");
-
-            // Change button text to "✔ Added"
-            setButtonText("✔ Added");
-
-            // Revert the button text back to "Add to Cart" after 2 seconds
-            setTimeout(() => {
-                setButtonText("Add to Cart");
-            }, 2000); // 2000ms = 2 seconds
+          const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/cart`, {
+            name: person.name,
+            img: person.img,
+            location: person.location,
+            salesdata: person.salesdata,
+            rating: person.rating,
+            serviceCost: person.serviceCost,
+            serviceName: person.serviceName,
+            description: person.description,
+            joiningdate: person.joiningdate,
+            phone: person.phone,
+            loggedInEmail: localStorage.getItem('loggedInEmail'),
+            providerEmail: person.providerEmail,
+          }, {
+            withCredentials: true
+          });
+      
+          dispatch({ type: "ADD_TO_CART", payload: person });
+          toast.success("✔ Added to Cart");
+          setButtonText("✔ Added");
+      
+          setTimeout(() => {
+            setButtonText("Add to Cart");
+          }, 2000);
         } catch (error) {
-            console.error('Error adding to cart:', error);
-            toast.error("❌ Failed to Add");
+          console.error('Error adding to cart:', error);
+          toast.error("❌ Failed to Add");
         }
-    };
+      };
+      
 
 
 

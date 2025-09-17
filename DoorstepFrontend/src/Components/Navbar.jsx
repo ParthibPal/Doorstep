@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const addToCartHandler = async (item) => {
         try {
-            const response = await axios.post('https://doorstep-backend-yesa.onrender.com/api/cart', {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/cart`, {
                 name: item.name,
                 img: item.imageSrc,
                 location: item.serviceLocation,
@@ -35,7 +35,10 @@ const Navbar = () => {
                 phone: item.mobileNumber,
                 loggedInEmail: localStorage.getItem('loggedInEmail'),
                 providerEmail: item.email,
-            });
+              }, {
+                withCredentials: true
+              });
+              
 
             // ✅ Toast Notification
             toast.success("Item added to cart!", { autoClose: 2000 });

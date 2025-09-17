@@ -63,7 +63,9 @@ const HomeCards = (props) => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch("https://doorstep-backend-yesa.onrender.com/api/cards")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards`, {
+      credentials: "include" // if your backend uses sessions or cookies
+    })    
       .then((res) => res.json())
       .then((data) => setCards(data))
       .catch((err) => console.error("Error fetching cards:", err));
@@ -75,7 +77,9 @@ const HomeCards = (props) => {
 
     if (newCategory) {
       try {
-        const response = await fetch(`https://doorstep-backend-yesa.onrender.com/api/cards/${category}`);
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/${category}`, {
+          credentials: "include" // if your backend uses sessions or cookies
+        });        
         if (response.ok) {
           const data = await response.json();
           setFetchedData(data);

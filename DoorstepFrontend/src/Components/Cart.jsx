@@ -19,11 +19,15 @@ const Cart = () => {
     const fetchCartItems = async () => {
         try {
             const email = localStorage.getItem('loggedInEmail');
-            const response = await axios.get(`https://doorstep-backend-yesa.onrender.com/api/cart?email=${email}`);
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/cart?email=${email}`, {
+                withCredentials: true
+              });              
             setCartItems(response.data);
         } catch (error) {
             console.error('Error fetching cart items:', error);
-        }
+            toast.error("⚠ Unable to load cart items");
+          }
+          
     };
 
     
@@ -32,12 +36,16 @@ const Cart = () => {
     // Delete cart item from DB
     const removeCartItem = async (id) => {
         try {
-            await axios.delete(`https://doorstep-backend-yesa.onrender.com/api/cart/${id}`);
+            await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/cart/${id}`, {
+                withCredentials: true
+              });              
             // After deletion, refresh the list
             setCartItems((prevItems) => prevItems.filter(item => item._id !== id));
+            toast.success("🗑️ Item removed from cart");
         } catch (error) {
             console.error('Error deleting cart item:', error);
-        }
+            toast.error("❌ Failed to remove item");
+          }          
     };
 
     useEffect(() => {

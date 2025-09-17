@@ -11,7 +11,7 @@ const ServicesPage = (props) => {
   const [cards, setCards] = useState([]); // State to store fetched cards
 
   useEffect(() => {
-    fetch("https://doorstep-backend-yesa.onrender.com/api/cards") // Fetch cards from backend
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards`)// Fetch cards from backend
       .then((res) => res.json())
       .then((data) => setCards(data))
       .catch((err) => toast.success("This service currently unavailable ⚠"));
@@ -30,7 +30,7 @@ const ServicesPage = (props) => {
 
       try {
         // Fetch the data based on the selected category
-        const response = await fetch(`https://doorstep-backend-yesa.onrender.com/api/cards/${category}`);
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/${category}`)
 
         if (response.ok) {
           const data = await response.json();

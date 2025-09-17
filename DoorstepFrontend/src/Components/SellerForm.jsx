@@ -29,9 +29,10 @@ const SellerForm = () => {
         };
 
         try {
-            const response = await axios.post("https://doorstep-backend-yesa.onrender.com/api/sellerTempForm", formData, {
-                headers: { "Content-Type": "application/json" }
-            })
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/sellerTempForm`, formData, {
+                headers: { "Content-Type": "application/json" },
+                withCredentials: true // if your backend uses sessions or cookies
+              });              
 
             if (response.status === 201) {
                 alert("✅ Service Provider request submitted successfully!")
