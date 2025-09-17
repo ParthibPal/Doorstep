@@ -19,7 +19,7 @@ import Admin from '../Components/Admin.jsx';
 const Router = () => {
   return (
 
-    <BrowserRouter basename="/Doorstep">
+    <BrowserRouter>
       <Navbar />
       <Routes>
 
@@ -37,7 +37,6 @@ const Router = () => {
 
         <Route path='/' element={<LogIn />} />
         <Route path='/Doorstep/' element={<LogIn />} />
-        <Route path='/logup' element={<LogUp />} />
       </Routes>
   
     </BrowserRouter>
