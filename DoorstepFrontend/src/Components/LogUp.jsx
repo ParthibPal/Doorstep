@@ -17,7 +17,9 @@ const navigate = useNavigate(); // For redirecting after successful signup
   const handleSubmit = (e) => {
       e.preventDefault();
       
-      axios.post('http://localhost:5000/signup', { name, email, password,confirmPassword,phone })
+      axios.post(`${import.meta.env.VITE_BACKEND_URL}/signup`, { name, email, password, confirmPassword, phone }, {
+        withCredentials: true
+      })
       .then(result => {
           // console.log(result);
           toast.success("You’ve signed up successfully! 🎉", { autoClose: 2000 });
