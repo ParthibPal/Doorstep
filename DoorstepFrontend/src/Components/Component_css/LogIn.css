@@ -10,7 +10,7 @@
 .check {
     width: 100%;
     height: 100vh;
-    background-image: url('../../Images/homep.PNG');
+    background-image: url('../../images/homep.PNG');
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(8px);
