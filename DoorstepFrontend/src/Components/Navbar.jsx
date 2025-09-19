@@ -59,7 +59,7 @@ const Navbar = () => {
     const handleSearchKeyDown = async (e) => {
         if (e.key === 'Enter' && searchTerm.trim()) {
             try {
-                const response = await fetch('https://doorstep-backend-yesa.onrender.com/api/cards');
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards`);
                 const data = await response.json();
 
                 const filtered = data.filter((item) =>
@@ -82,7 +82,7 @@ const Navbar = () => {
 
         if (newCategory) {
             try {
-                const response = await fetch(`https://doorstep-backend-yesa.onrender.com/api/cards/${category}`);
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/${category}`);
                 if (response.ok) {
                     const data = await response.json();
                     setFetchedData(data);
