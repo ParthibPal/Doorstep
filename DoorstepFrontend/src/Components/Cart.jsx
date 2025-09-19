@@ -100,7 +100,7 @@ const Cart = () => {
 
                             try {
                                 // 1. Save to sales-table
-                                await axios.post('https://doorstep-backend-yesa.onrender.com/api/sales-table', { sales: salesData });
+                                await axios.post(`${import.meta.env.VITE_BACKEND_URL}`, { sales: salesData });
 
                                 // 2. Remove items from cart table (reuse your function)
                                 for (const item of cartItems) {
