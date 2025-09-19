@@ -30,7 +30,7 @@ const ServicesPage = (props) => {
 
       try {
         // Fetch the data based on the selected category
-        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/${category}`)
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/cards/${category}`);
 
         if (response.ok) {
           const data = await response.json();
