@@ -1,9 +1,3 @@
-Here’s a **fully styled, GitHub-friendly `README.md`**, perfectly formatted and ready for **copy-paste**.
-
-It includes emojis, badges, tables, and a clean structure for better readability.
-
----
-
 ````markdown
 # 🚪 Doorstep
 
