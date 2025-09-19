@@ -240,6 +240,10 @@ This project is licensed under the ISC License.
 **Parthib Pal**
 GitHub: [@ParthibPal](https://github.com/ParthibPal)
 
+Here’s the updated section with your LinkedIn added:
+
+---
+
 ## 🙏 Acknowledgments
 
 * React team for the amazing framework
@@ -249,11 +253,9 @@ GitHub: [@ParthibPal](https://github.com/ParthibPal)
 
 ## 📞 Support
 
-If you have any questions or need help, open an issue on GitHub or contact the maintainer.
+If you have any questions or need help, open an issue on GitHub or contact me:
+**LinkedIn:** [Parthib Pal](https://www.linkedin.com/in/parthibpal/)
 
 ---
 
 **Made with ❤️ by Parthib Pal**
-
-
-Do you want me to do that?
